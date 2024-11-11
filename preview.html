@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Faktur Freelance</title>
+  <link rel="stylesheet" href="style_preview.css">
+</head>
+<body>
+  <div class="preview-container">
+    <!-- Header with Logo, Title, Date -->
+    <div class="header">
+      <div class="logo">
+        <img src="gambar/invoice.png" alt="Logo" width="80">
+      </div>
+      <div class="title">
+        <h1>Reyz Software Engineer</h1>
+      </div>
+      <div class="date">
+        <p id="invoiceDate"></p>
+      </div>
+    </div>
+
+    <!-- New Time Recording and Social Media in Header Section -->
+    <div class="header-bottom">
+      <div class="timestamp">
+        <p id="timestamp"></p>
+      </div>
+      <div class="social-media">
+        <p>Instagram: <a href="https://www.instagram.com/raihanzkf_" target="_blank">raihanzkf_</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@raihanzkf_" target="_blank">raihanzkf_</a></p>
+        <p>No. HP: <a href="tel:+6281333591707">081333591707</a></p>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- Invoice Details Section -->
+    <div class="invoice-details">
+      <h2>Faktur Pembayaran</h2>
+      <div class="details-section">
+        <div class="details-item">
+          <strong>Nama Klien:</strong> <span id="clientNamePreview"></span>
+        </div>
+        <div class="details-item">
+          <strong>Jenis Layanan:</strong> <span id="serviceTypePreview"></span>
+        </div>
+        <div class="details-item">
+          <strong>Keterangan:</strong> <span id="descriptionPreview"></span>
+        </div>
+        <div class="details-item">
+          <strong>Jumlah Total:</strong> <span id="amountPreview"></span>
+        </div>
+        <div class="details-item">
+          <strong>Down Payment (DP):</strong> <span id="dpPreview"></span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- Footer with Remaining Balance and Card Image -->
+    <div class="footer">
+      <div class="total-section">
+        <div class="total-item">
+          <strong>Sisa Pembayaran:</strong> <span id="balancePreview"></span>
+        </div>
+        <!-- Card Image Section -->
+        <div class="card-image">
+          <img id="cardImage" src="gambar/lunas.png" alt="Card Image" width="100">
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button onclick="window.print()">Cetak Faktur</button>
+        <a href="index.html"><button>Kembali ke Form</button></a>
+        <button onclick="updateStatus()">Status</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="preview.js"></script>
+</body>
+</html>

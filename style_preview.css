@@ -1,0 +1,201 @@
+/* Styling untuk container dan keseluruhan layout */
+.preview-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.header .logo img {
+    width: 80px;
+}
+
+.title h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.timestamp {
+    font-size: 14px;
+    color: #777;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.social-media a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #0056b3;
+}
+
+.separator {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+.invoice-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.details-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* Styling modern untuk bagian sisa pembayaran */
+.footer .total-item {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.2);
+    border-left: 8px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.footer .total-item:hover {
+    box-shadow: 0px 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+.footer .total-item strong {
+    font-size: 18px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.footer .total-item span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.action-buttons button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.action-buttons a button {
+    background-color: #ccc;
+}
+
+.card-image img {
+    display: none; /* Initial state is hidden */
+    margin-left: 180px;
+    width: 200px;
+}
+
+/* Media query untuk perangkat dengan lebar layar kecil (maksimal 600px) */
+@media (max-width: 600px) {
+    .preview-container {
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .title h1 {
+        font-size: 24px;
+    }
+    
+    .header .logo img {
+        width: 60px;
+    }
+    
+    .header-bottom,
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .details-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer .total-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .footer .total-item strong,
+    .footer .total-item span {
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    .card-image img {
+        margin-left: 0;
+        width: 100%;
+    }
+}

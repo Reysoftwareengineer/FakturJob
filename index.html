@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Faktur Freelance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Faktur <br>Reyz Software Engineer</h1>
+    <form id="invoiceForm">
+      <label for="clientName">Nama Klien:</label>
+      <input type="text" id="clientName" required>
+
+      <label for="serviceType">Jenis Layanan:</label>
+      <select id="serviceType">
+        <option value="Website">Website</option>
+        <option value="Desktop Application">Aplikasi Desktop</option>
+        <option value="Mobile Application">Aplikasi Mobile</option>
+      </select>
+
+      <!-- Kolom Keterangan dipindahkan di sini -->
+      <label for="description">Keterangan:</label>
+      <textarea id="description" rows="3"></textarea>
+
+      <label for="amount">Jumlah Total (Rp):</label>
+      <input type="text" id="amount" required oninput="formatAmount(this), calculateBalance()">
+
+      <label for="dp">Down Payment (DP) (Rp):</label>
+      <input type="text" id="dp" oninput="formatAmount(this), calculateBalance()">
+
+      <label for="balance">Sisa Pembayaran (Rp):</label>
+      <input type="number" id="balance" readonly>
+
+      <button type="button" onclick="generateInvoice()">Buat Nota</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
